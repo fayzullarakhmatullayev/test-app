@@ -4,7 +4,6 @@ import cors from 'cors';
 import pg from 'pg';
 
 dotenv.config();
-
 const { Pool } = pg;
 
 const pool = new Pool({
