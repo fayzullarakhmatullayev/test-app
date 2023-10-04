@@ -12,10 +12,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.send('hello');
-});
-
 app.get('/api/employee', async (req, res) => {
   try {
     pool.query('SELECT * FROM employee', (error, results) => {
