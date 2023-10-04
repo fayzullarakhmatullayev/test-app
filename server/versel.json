@@ -1,14 +1,13 @@
 {
-  "name": "test-api",
-  "version": 1,
-  "runtime": "nodejs/18",
-  "build": {
-    "cmd": "npm install && npm run start"
+  "version": 2,
+  "builds": {
+    "src": "./index.js",
+    "use": "@vercel/node"
   },
   "routes": [
     {
-      "src": "/api/*",
-      "dest": "index.js"
+      "src": "/(.*)",
+      "dest": "/"
     }
   ]
 }
