@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.json({ message: 'success' });
+  res.send('hello');
 });
 
 app.get('/api/employee', async (req, res) => {
