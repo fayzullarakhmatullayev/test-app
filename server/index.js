@@ -1,10 +1,16 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-
-import pool from './db.js';
+import pg from 'pg';
 
 dotenv.config();
+
+const { Pool } = pg;
+
+const pool = new Pool({
+  connectionString: process.env.POSTGRES_URL + '?sslmode=require'
+});
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
