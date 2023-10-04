@@ -40,7 +40,9 @@ const loading = ref(false)
 const fetchData = async () => {
   try {
     loading.value = true
-    const res = await fetch('/api/employee')
+    const res = await fetch(
+      'https://test-app-server-4k8haakqs-fayzullarakhmatullayev.vercel.app/api/employee'
+    )
     employees.value = await res.json()
   } finally {
     loading.value = false

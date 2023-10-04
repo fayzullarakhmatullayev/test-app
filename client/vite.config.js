@@ -10,13 +10,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://test-app-server-4k8haakqs-fayzullarakhmatullayev.vercel.app/',
-        changeOrigin: true
-      }
-    }
   }
 })
