@@ -40,7 +40,7 @@ const loading = ref(false)
 const fetchData = async () => {
   try {
     loading.value = true
-    const res = await fetch('/api/employee')
+    const res = await fetch('https://test-app-api-blush.vercel.app/api/employee')
     employees.value = await res.json()
   } finally {
     loading.value = false
