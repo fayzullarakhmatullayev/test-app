@@ -14,7 +14,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://test-app-server-4k8haakqs-fayzullarakhmatullayev.vercel.app/',
         changeOrigin: true
       }
     }
