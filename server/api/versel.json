@@ -1,0 +1,14 @@
+{
+  "name": "test-api",
+  "version": 1,
+  "runtime": "nodejs/18",
+  "build": {
+    "cmd": "npm install && npm run build"
+  },
+  "routes": [
+    {
+      "src": "/api/*",
+      "dest": "index.js"
+    }
+  ]
+}
