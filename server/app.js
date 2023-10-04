@@ -43,5 +43,3 @@ app.get('/api/client', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server runing on http://localhost:${PORT}`);
 });
-
-export default app;
